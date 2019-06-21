@@ -1,0 +1,222 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ asset('stockCSS/form.css') }}">  
+{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+<div class="container" id="contenu" style="margin-top: -35px;margin-left: 200px">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                     <h3 class="panel-title" style="padding-left:110px; font-size:25px">Ajouter Département</h3>
+
+                </div>
+                
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                            <div class="form-group">                 
+                                           {{ form_row(form.Nomdepartement,{ 'attr' : { 'class' : 'form-control', 'label' : 'GAYE'}}) }}
+                                
+                                          </div>
+                                          <div class="form-group">                 
+                                            {{ form_row(form.direction,{ 'attr' : { 'class' : 'form-control', 'label' : 'GAYE'}}) }}
+                                 
+                                           </div>    
+                      <!-- <div class="form-group">
+                            <label class="col-sm-3 control-label">Nom</label>
+                            <div class="col-sm-9">
+                                <div class="input-group" id="datepicker"> -->
+                                    <!-- <select id="month1" class="form-control">
+                                        <option>Mr</option>
+                                        <option>Mrs</option>
+                                        <option>Miss</option>
+                                        
+                                    </select>  -->
+                                  <!-- <span class="input-group-addon superslim"></span> -->
+                                    <!-- <input type="email" class="form-control" id="inputEmail3" placeholder="Email" />
+                                </div>
+                            </div>
+                        </div> -->
+                      <div class="input-group ">
+        <!-- <div class="input-group-btn"> -->
+          <!-- <select class="btn btn-default dropdown-toggle" ng-model="filterOption">
+            <option>Mr</option>
+                                        <option>Mrs</option>
+                                        <option>Miss</option>
+          </select> -->
+          
+        <!-- </div> -->
+        <!-- <input type="text" ng-model="query" class="form-control" placeholder="Enter ID / Name" /> -->
+        <div class="input-group-btn">
+          <!-- <button ng-click="search()" type="submit" class="btn"> -->
+            <!-- <i class="glyphicon glyphicon-search"></i> -->
+          </button>
+        </div>
+      </div>
+      <!-- <div class="form-group"> -->
+            <!-- <label for="inputPassword3" class="col-sm-3 control-label">Matricule</label> -->
+            
+                             
+        <!-- </div> -->
+      <!-- <div class="form-group"> -->
+            <!-- <label for="inputEmail3" class="col-sm-3 control-label">Email</label> -->
+          
+                   
+        <!-- </div> -->
+      <!-- <div class="form-group"> -->
+                      <!-- <label for="Password" class="col-sm-3 control-label">Username</label> -->
+                      
+                        
+                            <!-- </div> -->
+                    
+                      
+                        
+                        <!-- <div class="form-group"> -->
+                            <!-- <label for="inputPassword3" class="col-sm-3 control-label">Password</label> -->
+                        
+                                   
+                            
+                        <!-- </div> -->
+                        
+                                <!-- <label for="Password" class="col-sm-3 control-label">Photo (Optionel)</label> -->
+                                 
+                                      
+                               
+                                      
+                        <!-- <div class="form-group"> -->
+                                <!-- <label for="inputPassword3" class="col-sm-3 control-label">Role</label> -->
+                                                                   
+                                   
+                        <!-- </div> -->
+                        <!-- <div class="form-group">
+                            <label for="skill" class="col-sm-3 control-label">Skill</label>
+                            <div class="col-sm-9">
+                                <select id="skill" class="form-control multiselect " multiple="multiple">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-group">
+                            <label class="col-sm-3 control-label">Dates range</label>
+                            <div class="col-sm-9">
+                                <div class="input-daterange input-group" id="datepicker">
+                                    <input type="text" class="input-small form-control" name="start" /> <span class="input-group-addon">to</span>
+
+                                    <input type="text" class="input-small form-control" name="end" />
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="form-group">
+                            <label class="col-sm-3 control-label">Months</label>
+                            <div class="col-sm-9">
+                                <div class="input-group" id="datepicker">
+                                    <select id="month1" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select> <span class="input-group-addon">to</span>
+
+                                    <select id="month2" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Subscribe</label>
+                            <div class="col-sm-9">
+                                <div class="btn-group input-group btn-group-justified" data-toggle="buttons">
+                                    <label class="btn btn-success">
+                                        <input type="radio" name="options" id="option1" />Yes</label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="options" id="option2" />Maybe</label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="option3" />No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Mails</label>
+                            <div class="col-sm-9">
+                                <div class="btn-group input-group btn-group-justified" data-toggle="buttons">
+                                    <label class="btn btn-success">
+                                        <input type="checkbox" name="options" id="option1" />Admins</label>
+                                    <label class="btn btn-primary">
+                                        <input type="checkbox" name="options" id="option2" />Mods</label>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" />Remember me</label>
+                                </div>
+                            </div>
+                        </div> -->
+                           
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default" style="background-color: royalblue;color:aliceblue;margin-left:110px;font-size:20px">Ajouter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }} 
+        <!-- <div class="col-md-7">
+            <div class="panel panel-primary">
+                <div class="panel-heading clearfix">
+                     <h3 class="panel-title pull-left">Chart panel</h3>
+
+                    <div class="btn-group btn-group-xs pull-right"> <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a>
+                    <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span></a>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">Panel content</div>
+            </div>
+        </div> -->
+    </div>
+</div>
+   
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        $('.input-daterange').datepicker();
+        $('.multiselect').multiselect({
+            includeSelectAllOption: true,
+            buttonClass: 'form-control'
+        });
+    </script>
+{% endblock %}

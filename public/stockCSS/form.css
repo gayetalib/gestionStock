@@ -1,0 +1,14 @@
+select.multiselect, select.multiselect + div.btn-group, select.multiselect + div.btn-group button.multiselect, select.multiselect + div.btn-group.open .multiselect-container {
+    width:100% !important;
+}
+.input-group-addon.superslim {
+    padding: 0px 0px; 
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
